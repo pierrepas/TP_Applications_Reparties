@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*
 from tkinter import *
 
@@ -11,7 +11,7 @@ class GUI_SNCF:
         master.title("Trouves Ton Train!")
 
         self.label = Label(
-            fm, text="   La SNCF vous souhaite bienvenue!   ")
+            master, text="  La SNCF vous souhaite bienvenue!  ")
         self.label.pack()
         self.lV1 = Label(master, text="Ville 1:")
         self.lV2 = Label(master, text="Ville 2:")
@@ -25,7 +25,6 @@ class GUI_SNCF:
         self.lat2.insert(0, "45.8992")
         self.long2 = Entry(master)
         self.long2.insert(0, "6.1294")
-
 
         self.lV1.pack()
         self.lat1.pack()
@@ -41,8 +40,13 @@ class GUI_SNCF:
         self.close_button.pack(fill=X)
 
     def calculDist(self):
-        print("Envoi des données au serveur...")
-        print("Désolé, la SNCF n'a pas encore implémenté cette fonction")
+        print("Coordonnées ville 1: Latitude = ", float(
+            self.lat1.get()), " Longitude = ", float(self.long1.get()))
+        print("Coordonnées ville 2: Latitude = ", float(
+            self.lat2.get()), " Longitude = ", float(self.long2.get()))
+        print("Envoi des donnees au serveur...")
+        print("Désolé, la SNCF n'a pas encore implemente cette fonction")
+        print("")
 
 root = Tk()
 g = GUI_SNCF(root)
