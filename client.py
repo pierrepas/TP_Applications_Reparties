@@ -17,9 +17,15 @@ class GUI_SNCF:
         self.lV2 = Label(master, text="Ville 2:")
 
         self.lat1 = Entry(master)
+        self.lat1.insert(0, "45.5646")
         self.long1 = Entry(master)
+        self.long1.insert(0, "5.9178")
+
         self.lat2 = Entry(master)
+        self.lat2.insert(0, "45.8992")
         self.long2 = Entry(master)
+        self.long2.insert(0, "6.1294")
+
 
         self.lV1.pack()
         self.lat1.pack()
@@ -35,7 +41,8 @@ class GUI_SNCF:
         self.close_button.pack(fill=X)
 
     def calculDist(self):
-        print("Désolé, je n'ai pas encore implémenté cette fonction!")
+        print("Envoi des données au serveur...")
+        print("Désolé, la SNCF n'a pas encore implémenté cette fonction")
 
 root = Tk()
 g = GUI_SNCF(root)
