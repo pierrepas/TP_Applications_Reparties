@@ -7,7 +7,6 @@ class GUI_SNCF:
 
     def __init__(self, master):
         self.master = master
-        fm = Frame(master)
         master.title("Trouves Ton Train!")
 
         self.label = Label(
@@ -40,13 +39,18 @@ class GUI_SNCF:
         self.close_button.pack(fill=X)
 
     def calculDist(self):
-        print("Coordonnées ville 1: Latitude = ", float(
-            self.lat1.get()), " Longitude = ", float(self.long1.get()))
-        print("Coordonnées ville 2: Latitude = ", float(
-            self.lat2.get()), " Longitude = ", float(self.long2.get()))
-        print("Envoi des donnees au serveur...")
-        print("Désolé, la SNCF n'a pas encore implemente cette fonction")
+        try:
+            print("Coordonnées ville 1: Latitude = ", float(
+                self.lat1.get()), " Longitude = ", float(self.long1.get()))
+            print("Coordonnées ville 2: Latitude = ", float(
+                self.lat2.get()), " Longitude = ", float(self.long2.get()))
+            print("Envoi des donnees au serveur...")
+            print("Désolé, la SNCF n'a pas encore implemente cette fonction")
+        except:
+            print("Veuillez entrer des coordonnées valides, petit malin!")
         print("")
+
+
 
 root = Tk()
 g = GUI_SNCF(root)
